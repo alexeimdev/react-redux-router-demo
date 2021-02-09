@@ -1,8 +1,10 @@
 import React from 'react';
 
-import AppHeader from './components/shared/appHeader';
-import AppContainer from './components/shared/appContainer';
-import AppFooter from './components/shared/appFooter';
+import AppHeader from './shared/appHeader';
+import AppContainer from './shared/appContainer';
+import AppFooter from './shared/appFooter';
+
+//import './app.scss';
 
 export default function App(props) {
     return (
