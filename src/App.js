@@ -1,7 +1,15 @@
 import React from 'react';
 
-export default function App (props) {
+import AppHeader from './components/shared/appHeader';
+import AppContainer from './components/shared/appContainer';
+import AppFooter from './components/shared/appFooter';
+
+export default function App(props) {
     return (
-        <div>Hello world from react App</div>
+        <>
+            <AppHeader />
+            <AppContainer />
+            <AppFooter />
+        </>
     )
 }
