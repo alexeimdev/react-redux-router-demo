@@ -1,12 +1,14 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import store from '../../redux/store/configureStore';
-import Layout from './layout';
+import Header from './header';
+import Container from './container';
+import Footer from './footer';
 
 export default function App(props) {
     return (
-        <Provider store={store}>
-            <Layout />
-        </Provider>
+        <div className="app-wrapper">
+            <Header />
+            <Container />
+            <Footer />
+        </div>
     )
 }

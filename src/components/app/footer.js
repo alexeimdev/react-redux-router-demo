@@ -4,9 +4,7 @@ export default function Footer() {
     
     return (
         <footer className="app-footer">
-            <p>
-                App Footer
-            </p>
+            <div>App Footer</div>
         </footer>
     )
 }
