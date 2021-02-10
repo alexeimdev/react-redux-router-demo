@@ -1,10 +1,10 @@
 import React from 'react';
 import Test from '../test/test';
 
-export default function AppContainer(props) {
+export default function Container(props) {
 
     return (
-        <main>
+        <main className="container">
             <p>App Container</p>
             <Test />
         </main>

@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function AppHeader() {
+export default function Header() {
 
     return (
-        <header>
+        <header className="app-header">
             <div>
                 App Header
             </div>
