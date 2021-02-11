@@ -7,8 +7,11 @@ import {
 const getSubscribersList = (value) => {
     return (dispacth) => {
         dispacth(fetchSubscriberList());
-        const list = ['0501111111', '0502222222', '0503333333', '0504444444', '0505555555'];
-        dispacth(fetchSubscriberListSuccess(list))
+        
+        setTimeout(() => {
+            const list = ['050-1111111', '050-2222222', '050-3333333', '050-4444444', '050-5555555'];
+            dispacth(fetchSubscriberListSuccess(list))
+        }, 1000)
     }
 }
 
