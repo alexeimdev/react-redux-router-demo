@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SubscriberListUpgradePage() {
+export default function SubscriberListUpgradePage(props) {
     
     return (
         <div>

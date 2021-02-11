@@ -1,5 +1,6 @@
 import React from 'react';
-import Test from '../test/test';
+import { Switch, Route } from 'react-router-dom';
+import SubscriberListUpgradePage from '../pages/subscriberListUpgradePage';
 
 export default function Container(props) {
 
@@ -11,6 +12,11 @@ export default function Container(props) {
 
     return (
         <main className="container" style={styles.container}>
+            <Switch>
+                <Route path="*">
+                    <SubscriberListUpgradePage />
+                </Route>
+            </Switch>
         </main>
     )
 }
