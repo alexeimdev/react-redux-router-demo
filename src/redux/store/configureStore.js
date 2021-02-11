@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import rooReducer from '../reducers'
 
 const initialState = {};
@@ -6,5 +7,5 @@ const initialState = {};
 export default createStore(
     rooReducer,
     initialState,
-    applyMiddleware(),
+    applyMiddleware(thunk),
 );
