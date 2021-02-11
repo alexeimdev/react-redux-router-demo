@@ -10,7 +10,7 @@ export default function Header() {
     }
 
     return (
-        <header className="navbar navbar-expand-md navbar-dark bd-navbar" style={styles.header}>
+        <header className="navbar navbar-expand-md navbar-dark bd-navbar sticky-top" style={styles.header}>
             <nav className="container justify-content-center">
                 <img src={logoImage} alt="" />
             </nav>
