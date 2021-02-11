@@ -11,32 +11,6 @@ export default function Container(props) {
 
     return (
         <main className="container" style={styles.container}>
-            <p>App Container</p>
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
-            <Test />
         </main>
     )
 }
