@@ -1,10 +1,19 @@
 import React from 'react';
+import logoImage from '../../images/logo.png';
 
 export default function Header() {
 
+    const styles = {
+        header: {
+            backgroundColor: '#f8f9fa',
+        }
+    }
+
     return (
-        <header className="app-header">
-            <div>App Header</div>
+        <header className="navbar navbar-expand-md navbar-dark bd-navbar" style={styles.header}>
+            <nav className="container justify-content-center">
+                <img src={logoImage} alt="" />
+            </nav>
         </header>
     )
 }
