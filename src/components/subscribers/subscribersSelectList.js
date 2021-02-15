@@ -34,7 +34,7 @@ function SubscribersListItem(props) {
     }
 
     return (
-        <Link to={`/subscriber/${props.item}`}>
+        <Link to={`/subscribers/${props.item}`}>
             <li className="list-group-item d-flex justify-content-between align-items-center mt-2 mb-2" style={styles.item} onClick={() => handleSelectClick(props.item)}>
                 <span>{props.item}</span>
                 <img src={ArrowLeftImage} style={styles.arrowLeftImage} />

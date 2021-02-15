@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Footer() {
 
@@ -8,9 +9,9 @@ export default function Footer() {
                 <div className="col-12">
                     <h5>קישורים</h5>
                     <ul className="list-unstyled text-small">
-                        <li><a className="link-secondary" href="#">דף הבית</a></li>
-                        <li><a className="link-secondary" href="#">אודות</a></li>
-                        <li><a className="link-secondary" href="#">מכר</a></li>
+                        <li><Link to="/" className="link-secondary">דף הבית</Link></li>
+                        <li><Link to="/subscribers" className="link-secondary">מכר</Link></li>
+                        <li><Link to="/about" className="link-secondary">אודות</Link></li>
                     </ul>
                 </div>
             </div>

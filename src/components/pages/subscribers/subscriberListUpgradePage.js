@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { getSubscribersList } from '../../redux/actionCreators/subscribersActions';
-import SubscribersSelectList from '../subscribers/subscribersSelectList';
+import { getSubscribersList } from '../../../redux/actionCreators/subscribersActions';
+import SubscribersSelectList from '../../subscribers/subscribersSelectList';
 
 function SubscriberListUpgradePage(props) {
 
