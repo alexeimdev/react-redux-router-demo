@@ -1,13 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ArrowLeftImage from "../../images/arrow-left.png";
+
+const styles = {
+    listWrapper: {
+        backgroundColor: '#f5f5f5',
+        borderRadius: '25px',
+        padding: '10px',
+    },
+    item: {
+        cursor: 'pointer',
+        lineHeight: 4,
+        borderTopWidth: 0,
+        borderRadius: '15px',
+        fontWeight: 'bold',
+        fontSize: '1.2rem',
+        color: '#565656',
+    },
+    arrowLeftImage: {
+        width: '10px',
+    }
+}
+
 
 function SubscribersListItem(props) {
-
-    const styles = {
-        item: {
-            cursor: 'pointer',
-            onHover: 'backgrondColor: red'
-        }
-    }
 
     function handleSelectClick(value) {
         alert('handleSelectClick ' + value);
@@ -18,21 +34,20 @@ function SubscribersListItem(props) {
     }
 
     return (
-        <div className="card shadow-sm bg-color-red mt-3 col-12 col-md-8"
-            style={styles.item}
-            onClick={() => handleSelectClick(props.item)}>
-            <div className="card-body">
-                <h5 className="card-title">{props.item}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            </div>
-        </div>
+        <Link to={`/subscriber/${props.item}`}>
+            <li className="list-group-item d-flex justify-content-between align-items-center mt-2 mb-2" style={styles.item} onClick={() => handleSelectClick(props.item)}>
+                <span>{props.item}</span>
+                <img src={ArrowLeftImage} style={styles.arrowLeftImage} />
+            </li>
+        </Link>
+
     )
 }
 
 export default function SubscribersSelectList(props) {
     return (
-        <div className="row d-flex justify-content-center">
+        <ul className="list-group" style={styles.listWrapper}>
             {props.list?.map(item => <SubscribersListItem key={item} item={item} />)}
-        </div>
+        </ul>
     )
 }

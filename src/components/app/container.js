@@ -13,8 +13,11 @@ export default function Container(props) {
     return (
         <main className="container" style={styles.container}>
             <Switch>
-                <Route path="*">
+                <Route path="/">
                     <SubscriberListUpgradePage />
+                </Route>
+                <Route path="/subscriber/:id">
+                    <h1>subscriber</h1>
                 </Route>
             </Switch>
         </main>
