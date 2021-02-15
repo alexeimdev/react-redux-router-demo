@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArrowLeftImage from "../../images/arrow-left.png";
 
 const styles = {
     listWrapper: {
@@ -15,18 +14,16 @@ const styles = {
         borderRadius: '15px',
         fontWeight: 'bold',
         fontSize: '1.2rem',
-        color: '#565656',
     },
     arrowLeftImage: {
         width: '10px',
     }
 }
 
-
 function SubscribersListItem(props) {
 
     function handleSelectClick(value) {
-        alert('handleSelectClick ' + value);
+        props.onClick(value);
     }
 
     function handleInfoClick(value) {
@@ -35,19 +32,27 @@ function SubscribersListItem(props) {
 
     return (
         <Link to={`/subscribers/${props.item}`}>
-            <li className="list-group-item d-flex justify-content-between align-items-center mt-2 mb-2" style={styles.item} onClick={() => handleSelectClick(props.item)}>
+            <li className={`list-group-item d-flex justify-content-between align-items-center mt-2 mb-2 ${props.active && " active "}`} style={styles.item} onClick={() => handleSelectClick(props.item)}>
                 <span>{props.item}</span>
-                <img src={ArrowLeftImage} style={styles.arrowLeftImage} />
             </li>
         </Link>
-
     )
 }
 
 export default function SubscribersSelectList(props) {
     return (
-        <ul className="list-group" style={styles.listWrapper}>
-            {props.list?.map(item => <SubscribersListItem key={item} item={item} />)}
-        </ul>
+        <>
+            { props.list && props.list.length > 0 ?
+                <ul className="list-group" style={styles.listWrapper}>
+                    {props.list?.map(item =>
+                        <SubscribersListItem key={item}
+                            item={item}
+                            active={props.selectedSubscriber == item}
+                            onClick={props.onSelectSubscriber} />
+                    )}
+                </ul>
+                : <div>טוען...</div>
+            }
+        </>
     )
 }

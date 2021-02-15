@@ -2,7 +2,8 @@ import {
     FETCH_SUBSCRIBERS_LIST,
     FETCH_SUBSCRIBERS_LIST_SUCCESS,
     FETCH_SUBSCRIBERS_LIST_FAILURE,
-} from '../constants/subscribresActionTypes';
+    SET_SELECTED_SUBSCRIBER,
+} from '../constants/subscribersActionTypes';
 
 const initialState = {
     list: [],
@@ -26,6 +27,11 @@ export default function subscribersReducer(state = initialState, action) {
                 ...state,
                 fetchSubscriberListStatus: 'FAILURE',
             }
+        case SET_SELECTED_SUBSCRIBER:
+                return {
+                    ...state,
+                    selectedSubscriber: action.payload.subscriber,
+                }
         default: return state;
     }
 }

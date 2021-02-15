@@ -4,7 +4,7 @@ import HomePage from '../pages/homePage';
 import AboutPage from '../pages/aboutPage';
 import NotFoundPage from '../pages/notFoundPage';
 import SubscriberPage from '../pages/subscribers/subscriberPage';
-import SubscriberListUpgradePage from '../pages/subscribers/subscriberListUpgradePage';
+import SubscribersListUpgradePage from '../pages/subscribers/subscribersListUpgradePage';
 
 export default function Container(props) {
 
@@ -19,7 +19,7 @@ export default function Container(props) {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
-                <Route exact path="/subscribers" component={SubscriberListUpgradePage} />
+                <Route exact path="/subscribers" component={SubscribersListUpgradePage} />
                 <Route path="/subscribers/:id" component={SubscriberPage} />
                 
                 <Route path="*" component={NotFoundPage} />

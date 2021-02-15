@@ -7,8 +7,7 @@ export default function SubscriberPage(props) {
 
     return (
         <div className="container">
-            <h1>Subscriber</h1>
-            <h2>{id}</h2>
+            <h1>מנוי נבחר: {id}</h1>
         </div>
     )
 }
